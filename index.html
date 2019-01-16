@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Matrix Generator</title>
+    </head>
+    <style>
+        table
+        {
+            font-size: 160%;
+            width: 100%;
+            border: 1px solid;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+        table td
+        {
+            text-align: center;
+            width: 11%;
+            border-bottom: 1px solid;
+            padding: 0;
+        }
+        tr {
+          height: 5vw; /* Set this to whatever amount forms square cells */
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <body>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<!--        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>-->
+        <script type="text/javascript">
+            function generateNumbers() {
+                var values = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
+                var num = values[Math.floor(Math.random()*values.length)];
+                
+                document.write(num);
+            }
+            
+            function newGenerateNumbers() {
+                var values1 = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
+                var values2 = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
+                
+                values1.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                values1.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                
+                
+                document.write(num);
+            }
+            
+            function refresh() {
+                window.location.reload();
+            }
+            function print() {
+                var x = document.getElementById("header");
+                x.style.display = "none";
+                
+                var table = document.getElementsByTagName("table")[0];
+                var tableClone = table.cloneNode(true);
+                document.body.appendChild(tableClone);
+                
+            }
+        </script>
+        <center>
+            <div id="header">
+                <h2>Random Multiplication Matrix Generater</h2>
+                <h2 style="color:orange;">By Morrie Cunningham</h2>
+                <input type="button" value="Generate Numbers" onclick="refresh();"/>
+                <input type="button" value="Print" onclick="print();"/>
+                <br /><br />
+            </div>
+            <br /><br /><br /><br />
+            <script language="javascript" type="text/javascript">
+                
+                var values1 = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
+                var values2 = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
+                
+                values1.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                values2.sort(function () {
+                    return Math.random() - 0.5;
+                });
+                
+                document.write("<table><tbody><tr><td></td>");
+                for(var i = 0; i < 8; i++) {
+                    document.write("<td>" + values1[i] + "</td>");
+                }
+                document.write("</tr>");
+                for(var j = 0; j < 8; j++) {
+                    document.write("<tr><td>" + values2[j] + "</td>");
+                    for(var k = 0; k < 8; k++) {
+                        document.write("<td></td>")
+                    }
+                    document.write("</tr>")
+                }
+                document.write("</tbody></table>")
+                
+            </script>
+            
+            <br /><br /><br /><br /><br /><br /><br /><br />
+        </center>
+    </body>
+</html>
