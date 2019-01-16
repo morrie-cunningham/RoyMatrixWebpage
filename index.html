@@ -6,7 +6,7 @@
     <style>
         table
         {
-            font-size: 160%;
+            font-size: 200%;
             width: 100%;
             border: 1px solid;
             table-layout: fixed;
@@ -62,6 +62,7 @@
                 var table = document.getElementsByTagName("table")[0];
                 var tableClone = table.cloneNode(true);
                 document.body.appendChild(tableClone);
+                document.body.innerHTML = document.body.innerHTML + "<center><br /><div style='font-size: 140%;'>Name__________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hour________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Number Correct ____/64</div></center>";
                 
             }
         </script>
@@ -73,7 +74,7 @@
                 <input type="button" value="Print" onclick="print();"/>
                 <br /><br />
             </div>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             <script language="javascript" type="text/javascript">
                 
                 var values1 = Array(2, 3, 4, 6, 7, 8, 9, 11, 12);
@@ -101,8 +102,11 @@
                 document.write("</tbody></table>")
                 
             </script>
+            <br />
+            <div style="font-size: 140%;">Name__________________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hour________ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Number Correct ____/64</div>
+            <p></p>
             
-            <br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br />
         </center>
     </body>
 </html>
